@@ -103,7 +103,7 @@ jobs:
 
       - name: Send Teams Notification
         env:
-          WEBHOOK: ${{ vars.TEAMS_WEBHOOK }}
+          WEBHOOK: ${{ env.TEAMS_WEBHOOK }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           curl -X POST -H "Content-Type: application/json" \
